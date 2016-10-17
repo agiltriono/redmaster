@@ -137,9 +137,3 @@ function smartLink(){
         }
     }
 }
-var f = new smartLink();
-f.add("Copyright", "https://agieltriono.blogspot.com/");
-f.add("SEO", "https://agieltriono.blogspot.com/");
-f.add("Agiel Triono", "https://agieltriono.blogspot.com/");
-f.add("Gratis", "https://agieltriono.blogspot.com/");
-f.startScript();
