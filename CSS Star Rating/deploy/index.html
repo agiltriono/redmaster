@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+	<head>
+    
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<title>CSS Star Rating</title>
+		
+		<link rel="shortcut icon" href="images/preview/favicon.ico" />
+		
+		<!-- CSS style -->
+		<link rel="stylesheet" type="text/css" href="css/preview.css" />
+        
+        <!-- CSS Star Rating CSS settings -->
+		<link rel="stylesheet" type="text/css" href="css/css-star-rating.css" />
+        
+        <!-- Font awesome -->
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        
+        <!-- Google web fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+        
+        <!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        <!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        
+  	</head>
+    
+    <body>
+    
+    	<!-- Header -->
+		<header>
+			<div class="header-inner wrapper wrapper-center clearfix">
+            
+            	<h1>CSS Star Rating</h1>
+                <h3>Simple and easy to use rating or review widget</h3>
+            
+            </div>
+      	</header>
+        
+        <!-- Small -->
+        <section class="row">
+			
+            <div class="section-inner">				
+                <div class="wrapper wrapper-center clearfix"> 
+                                 
+                    <h2>Small</h2>   
+                                   
+                </div>					
+            </div>
+            
+            <div class="section-inner">	
+                <div class="wrapper clearfix">
+                
+                	<!-- No Checked Stars -->
+                    <div class="one-half-first">
+                        No Checked Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating">
+                            <input type="radio" id="star-p1" value="5">
+                            <label for="star-p1"><span>Awesome</span></label>
+                            
+                            <input type="radio" id="star-p2" value="4">
+                            <label for="star-p2"><span>Excellent</span></label>
+                            
+                            <input type="radio" id="star-p3" value="3">
+                            <label for="star-p3"><span>Good</span></label>
+                            
+                            <input type="radio" id="star-p4" value="2">
+                            <label for="star-p4"><span>Fair</span></label>
+                            
+                            <input type="radio" id="star-p5" value="1">
+                            <label for="star-p5"><span>Poor</span></label>
+                        </div>
+                    
+                    </div>	
+                    
+                    <!--  Half & Full Stars -->
+                    <div class="one-half-first">
+                        Half & Full Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating">                        
+                        	<input type="radio" id="star-c1" value="5">
+                            <label for="star-c1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="star-c2" value="4.5">
+                            <label class="star-half" for="star-c2"><span>4.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-c3" value="4">
+                            <label for="star-c3"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="star-c4" value="3.5">
+                            <label class="star-half" for="star-c4"><span>3.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-c5" value="3">
+                            <label for="star-c5"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="star-c6" value="2.5">
+                            <label class="star-half" for="star-c6"><span>2.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-c7" value="2">
+                            <label for="star-c7"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="star-c8" value="1.5" checked>
+                            <label class="star-half" for="star-c8"><span>1.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-c9" value="1">
+                            <label for="star-c9"><span>1 Star</span></label>
+                            
+                            <input type="radio" id="star-c0" value="0.5">
+                            <label class="star-half" for="star-c0"><span>0.5 Stars</span></label>                        
+                        </div>
+                       
+                  	</div>
+                    
+                    <!-- Full Stars Only  -->
+                    <div class="one-half-first">
+                        Full Stars Only
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating">    
+                        	<input type="radio" id="star-x1" value="5">
+                            <label for="star-x1"><span>Awesome</span></label>
+                            
+                            <input type="radio" id="star-x2" value="4">
+                            <label for="star-x2"><span>Excellent</span></label>
+                            
+                            <input type="radio" id="star-x3" value="3" checked>
+                            <label for="star-x3"><span>Good</span></label>
+                            
+                            <input type="radio" id="star-x4" value="2">
+                            <label for="star-x4"><span>Fair</span></label>
+                            
+                            <input type="radio" id="star-x5" value="1">
+                            <label for="star-x5"><span>Poor</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!--  Blue Stars -->
+                    <div class="one-half-first">
+                        Blue Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating blue">      
+                        	 <input type="radio" id="star-d1" value="5">
+                            <label for="star-d1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="star-d2" value="4.5">
+                            <label class="star-half" for="star-d2"><span>4.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-d3" value="4">
+                            <label for="star-d3"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="star-d4" value="3.5">
+                            <label class="star-half" for="star-d4"><span>3.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-d5" value="3">
+                            <label for="star-d5"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="star-d6" value="2.5" checked>
+                            <label class="star-half" for="star-d6"><span>2.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-d7" value="2">
+                            <label for="star-d7"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="star-d8" value="1.5">
+                            <label class="star-half" for="star-d8"><span>1.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-d9" value="1">
+                            <label for="star-d9"><span>1 Star</span></label>
+                            
+                            <input type="radio" id="star-d0" value="0.5">
+                            <label class="star-half" for="star-d0"><span>0.5 Stars</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!-- Green Stars  -->
+                    <div class="one-half-first">
+                        Green Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating green">      
+                        	<input type="radio" id="star-e1" value="5">
+                            <label for="star-e1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="star-e2" value="4.5">
+                            <label class="star-half" for="star-e2"><span>4.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-e3" value="4" checked>
+                            <label for="star-e3"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="star-e4" value="3.5">
+                            <label class="star-half" for="star-e4"><span>3.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-e5" value="3">
+                            <label for="star-e5"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="star-e6" value="2.5">
+                            <label class="star-half" for="star-e6"><span>2.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-e7" value="2">
+                            <label for="star-e7"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="star-e8" value="1.5">
+                            <label class="star-half" for="star-e8"><span>1.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-e9" value="1">
+                            <label for="star-e9"><span>1 Star</span></label>
+                            
+                            <input type="radio" id="star-e0" value="0.5">
+                            <label class="star-half" for="star-e0"><span>0.5 Stars</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!-- Purple Stars  -->
+                    <div class="one-half-first">
+                        Purple Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating purple">      
+                        	<input type="radio" id="star-f1" value="5">
+                            <label for="star-f1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="star-f2" value="4.5">
+                            <label class="star-half" for="star-f2"><span>4.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-f3" value="4">
+                            <label for="star-f3"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="star-f4" value="3.5">
+                            <label class="star-half" for="star-f4"><span>3.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-f5" value="3">
+                            <label for="star-f5"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="star-f6" value="2.5">
+                            <label class="star-half" for="star-f6"><span>2.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-f7" value="2">
+                            <label for="star-f7"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="star-f8" value="1.5" checked>
+                            <label class="star-half" for="star-f8"><span>1.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-f9" value="1">
+                            <label for="star-f9"><span>1 Star</span></label>
+                            
+                            <input type="radio" id="star-f0" value="0.5">
+                            <label class="star-half" for="star-f0"><span>0.5 Stars</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!-- Red Stars  -->
+                    <div class="one-half-first">
+                        Red Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating red">      
+                        	<input type="radio" id="star-a1" value="5">
+                            <label for="star-a1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="star-a2" value="4.5">
+                            <label class="star-half" for="star-a2"><span>4.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-a3" value="4">
+                            <label for="star-a3"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="star-a4" value="3.5">
+                            <label class="star-half" for="star-a4"><span>3.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-a5" value="3" checked>
+                            <label for="star-a5"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="star-a6" value="2.5">
+                            <label class="star-half" for="star-a6"><span>2.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-a7" value="2">
+                            <label for="star-a7"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="star-a8" value="1.5">
+                            <label class="star-half" for="star-a8"><span>1.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-a9" value="1">
+                            <label for="star-a9"><span>1 Star</span></label>
+                            
+                            <input type="radio" id="star-a0" value="0.5">
+                            <label class="star-half" for="star-a0"><span>0.5 Stars</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!--  Black Stars -->
+                    <div class="one-half-first">
+                        Black Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating black">      
+                        	<input type="radio" id="star-b1" value="5">
+                            <label for="star-b1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="star-b2" value="4.5">
+                            <label class="star-half" for="star-b2"><span>4.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-b3" value="4">
+                            <label for="star-b3"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="star-b4" value="3.5" checked>
+                            <label class="star-half" for="star-b4"><span>3.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-b5" value="3">
+                            <label for="star-b5"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="star-b6" value="2.5">
+                            <label class="star-half" for="star-b6"><span>2.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-b7" value="2">
+                            <label for="star-b7"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="star-b8" value="1.5">
+                            <label class="star-half" for="star-b8"><span>1.5 Stars</span></label>
+                            
+                            <input type="radio" id="star-b9" value="1">
+                            <label for="star-b9"><span>1 Star</span></label>
+                            
+                            <input type="radio" id="star-b0" value="0.5">
+                            <label class="star-half" for="star-b0"><span>0.5 Stars</span></label>
+                        </div>
+                        
+                  	</div>
+                
+                </div>				
+            </div>
+				
+		</section> 
+        
+        <!-- Medium -->
+        <section class="row row-darker">
+			
+            <div class="section-inner">				
+                <div class="wrapper wrapper-center clearfix"> 
+                                 
+                    <h2>Medium</h2>   
+                                   
+                </div>					
+            </div>
+            
+            <div class="section-inner">	
+                <div class="wrapper clearfix">
+                
+                	<!-- Medium Full Stars  -->
+                    <div class="one-half-first">
+                        Medium Full Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating medium">      
+                        	<input type="radio" id="ms1" value="5">
+                            <label for="ms1"><span>Awesome</span></label>
+                            
+                            <input type="radio" id="ms2" value="4">
+                            <label for="ms2"><span>Excellent</span></label>
+                            
+                            <input type="radio" id="ms3" value="3" checked>
+                            <label for="ms3"><span>Good</span></label>
+                            
+                            <input type="radio" id="ms4" value="2">
+                            <label for="ms4"><span>Fair</span></label>
+                            
+                            <input type="radio" id="ms5" value="1">
+                            <label for="ms5"><span>Poor</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!-- Medium Half & Full Stars  -->
+                    <div class="one-half-first">
+                        Medium Half & Full Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating medium red">      
+                            <input type="radio" id="mhalf-1" value="5">
+                            <label for="mhalf-1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="mhalf-2" value="4.5">
+                            <label class="star-half" for="mhalf-2"><span>4.5 Stars</span></label>
+                            
+                            <input type="radio" id="mhalf-3" value="4">
+                            <label for="mhalf-3"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="mhalf-4" value="3.5" checked>
+                            <label class="star-half" for="mhalf-4"><span>3.5 Stars</span></label>
+                            
+                            <input type="radio" id="mhalf-5" value="3">
+                            <label for="mhalf-5"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="mhalf-6" value="2.5">
+                            <label class="star-half" for="mhalf-6"><span>2.5 Stars</span></label>
+                            
+                            <input type="radio" id="mhalf-7" value="2">
+                            <label for="mhalf-7"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="mhalf-8" value="1.5">
+                            <label class="star-half" for="mhalf-8"><span>1.5 Stars</span></label>
+                            
+                            <input type="radio" id="mhalf-9" value="1">
+                            <label for="mhalf-9"><span>1 Star</span></label>
+                            
+                            <input type="radio" id="mhalf-0" value="0.5">
+                            <label class="star-half" for="mhalf-0"><span>0.5 Stars</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!-- Medium Green Stars  -->
+                    <div class="one-half-first">
+                        Medium Green Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating medium green">      
+                        	 <input type="radio" id="gs1" value="5">
+                            <label for="gs1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="gs2" value="4" checked>
+                            <label for="gs2"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="gs3" value="3">
+                            <label for="gs3"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="gs4" value="2">
+                            <label for="gs4"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="gs5" value="1">
+                            <label for="gs5"><span>1 Star</span></label>
+                        </div>
+                        
+                  	</div>
+                
+                </div>
+           	</div>
+            
+        </section>   
+        
+        <!-- Large -->
+        <section class="row">
+			
+            <div class="section-inner">				
+                <div class="wrapper wrapper-center clearfix"> 
+                                 
+                    <h2>Large</h2>   
+                                   
+                </div>					
+            </div>
+            
+            <div class="section-inner">	
+                <div class="wrapper clearfix">
+                
+                	<!-- Large Full Stars  -->
+                    <div class="one-half-first">
+                        Large Full Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating large">      
+                        	<input type="radio" id="ls1" value="5">
+                            <label for="ls1"><span>Awesome</span></label>
+                            
+                            <input type="radio" id="ls2" value="4">
+                            <label for="ls2"><span>Excellent</span></label>
+                            
+                            <input type="radio" id="ls3" value="3">
+                            <label for="ls3"><span>Good</span></label>
+                            
+                            <input type="radio" id="ls4" value="2" checked>
+                            <label for="ls4"><span>Fair</span></label>
+                            
+                            <input type="radio" id="ls5" value="1">
+                            <label for="ls5"><span>Poor</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!-- Large Half & Full Stars  -->
+                    <div class="one-half-first">
+                        Large Half & Full Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating large blue">      
+                        	<input type="radio" id="lghalf-1" value="5">
+                            <label for="lghalf-1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="lghalf-2" value="4.5">
+                            <label class="star-half" for="lghalf-2"><span>4.5 Stars</span></label>
+                            
+                            <input type="radio" id="lghalf-3" value="4">
+                            <label for="lghalf-3"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="lghalf-4" value="3.5">
+                            <label class="star-half" for="lghalf-4"><span>3.5 Stars</span></label>
+                            
+                            <input type="radio" id="lghalf-5" value="3">
+                            <label for="lghalf-5"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="lghalf-6" value="2.5" checked>
+                            <label class="star-half" for="lghalf-6"><span>2.5 Stars</span></label>
+                            
+                            <input type="radio" id="lghalf-7" value="2">
+                            <label for="lghalf-7"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="lghalf-8" value="1.5">
+                            <label class="star-half" for="lghalf-8"><span>1.5 Stars</span></label>
+                            
+                            <input type="radio" id="lghalf-9" value="1">
+                            <label for="lghalf-9"><span>1 Star</span></label>
+                            
+                            <input type="radio" id="lghalf-0" value="0.5">
+                            <label class="star-half" for="lghalf-0"><span>0.5 Stars</span></label>
+                        </div>
+                        
+                  	</div>
+                    
+                    <!--  Large Purple Stars -->
+                    <div class="one-half-first">
+                        Large Purple Stars
+                    </div>
+                    
+                    <div class="one-half">
+                    
+                   		<div class="css-star-rating large purple">      
+                        	<input type="radio" id="lg1" value="5">
+                            <label for="lg1"><span>5 Stars</span></label>
+                            
+                            <input type="radio" id="lg2" value="4" checked>
+                            <label for="lg2"><span>4 Stars</span></label>
+                            
+                            <input type="radio" id="lg3" value="3">
+                            <label for="lg3"><span>3 Stars</span></label>
+                            
+                            <input type="radio" id="lg4" value="2">
+                            <label for="lg4"><span>2 Stars</span></label>
+                            
+                            <input type="radio" id="lg5" value="1">
+                            <label for="lg5"><span>1 Star</span></label>
+                        </div>
+                        
+                  	</div>
+                
+                </div>
+           	</div>
+            
+        </section>                   
+        
+        <!-- Footer -->
+        <footer>
+        	<div class="wrapper clearfix">
+        
+			<span class="copyright">Copyright © <a href="http://www.flashbluedesign.com" target="_blank">flashblue</a><br>
+				<span class="social">
+					<a href="http://twitter.com/flashblue80" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="http://www.facebook.com/flashbluedesign" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                   	<a href="http://plus.google.com/114361730793593826266" title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a>
+					<a href="http://samiyilmaz.deviantart.com/" title="DeviantArt" target="_blank"><i class="fa fa-deviantart"></i></a>
+					<a href="http://www.behance.net/flashblue" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
+                    <a href="http://dribbble.com/flashblue" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a>
+					<a href="http://www.youtube.com/flashblue80" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+					<a href="http://www.codegrape.com/feeds/user/flashblue.atom" title="RSS" target="_blank"><i class="fa fa-rss"></i></a>
+				</span>
+			</span>
+            
+            </div>
+		</footer>
+    
+    </body>
+    
+</html>

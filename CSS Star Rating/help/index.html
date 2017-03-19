@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
+		<title>CSS Star Rating - Help Documentation</title>
+		
+		<!-- CSS style -->
+		<link rel="shortcut icon" href="assets/images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/fontello.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="assets/js/google-code-prettify/prettify.css" />
+		
+		<!-- Google web fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+		
+		<!-- jQuery -->
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+		<script type="text/javascript" src="assets/js/globals.js"></script>
+		<script type="text/javascript" src="assets/js/google-code-prettify/prettify.js"></script>
+	</head>
+	<body>
+		
+		<!-- Header -->
+		<header>
+			<div class="container">
+				<div class="logo">CSS Star Rating</div>
+				<div class="slogan">Simple and easy to use rating or review widget</div>
+			</div>
+		</header>
+		
+		<!-- Container -->
+		<div class="container">	
+		
+			<div class="avatar">
+				<a href="http://www.codegrape.com/user/flashblue"><img src="assets/images/flashblue.png" width="256" height="50" alt="FlashBlue" title="FlashBlue" /></a>
+			</div>
+		
+			<div class="author">
+				Created: <strong>04/01/2016</strong><br />
+				Last Update: <strong>01/07/2016</strong><br />
+				By: <strong><a href="http://www.codegrape.com/user/flashblue/portfolio">FlashBlue</a></strong><br />
+				Profile: <strong><a href="http://www.codegrape.com/user/flashblue">www.codegrape.com/user/flashblue</a></strong><br />
+				Website: <strong><a href="http://www.flashbluedesign.com/">www.flashbluedesign.com</a></strong><br />
+				E-mail: <strong><a href="mailto:flashblue80@hotmail.com">flashblue80@hotmail.com</a></strong><br />
+				Twitter: <strong><a href="http://twitter.com/flashblue80">twitter.com/flashblue80</a></strong>
+			</div>
+			<p>&nbsp;</p>
+		
+			<h2 class="alt">Table of Contents</h2>
+			<ol class="alpha">
+				<li><a href="#directories">Directories</a></li>
+				<li><a href="#installation">Installation</a></li>
+				<li><a href="#color">Colors</a></li>
+                <li><a href="#size">Sizes</a></li>
+				<li><a href="#php">Working with PHP</a></li>		
+			</ol>
+			
+			<hr />
+			<h3 id="directories">A) Directories</h3>
+			<p>
+				<b>source</b> - Original source files other files are part of the source, you do not need to upload any of these to your server. Use these to change the code or style.
+			</p>
+			<p>
+				<b>deploy</b> – Published files for adding item to the site.
+				These are the files you need to <span class="note">upload to your server</span>.
+			</p>
+			<p><b>help</b> – Help file (HTML)</p>
+			
+			<hr />
+			<h3 id="installation">B) Installation</h3>
+			<p>Installing the rating requires the following steps.</p>
+			<ol>
+				<li>Including the rating's css file.</li>
+				<li>Specifying the html tags of the rating within your page.</li>
+			</ol>	
+			<p>Below describes these steps in more detail.</p>
+			<p>In step 1, to include css files, simply specify the following lines of code within your <em>&lt;head&gt;</em> tag:</head>
+			<pre class="prettyprint lang-html linenums">
+&lt;link rel="stylesheet" type="text/css" href="css/css-star-rating.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" /&gt;
+</pre>
+			<p>In step 2, to specify the tags of the rating itself, refer to the examples in the <strong>deploy/index.html</strong> file.</p>
+			<p><b>Full Stars</b></p>
+			<pre class="prettyprint lang-html linenums">
+&lt;div class="css-star-rating"&gt;  
+  &lt;input type="radio" id="star-x1" value="5"&gt;
+  &lt;label for="star-x1"&gt;&lt;span&gt;Awesome&lt;/span&gt;&lt;/label&gt;
+  
+  &lt;input type="radio" id="star-x2" value="4"&gt;
+  &lt;label for="star-x2"&gt;&lt;span&gt;Excellent&lt;/span&gt;&lt;/label&gt;
+  
+  &lt;input type="radio" id="star-x3" value="3" <strong>checked</strong>&gt;
+  &lt;label for="star-x3"&gt;&lt;span&gt;Good&lt;/span&gt;&lt;/label&gt;
+  
+  &lt;input type="radio" id="star-x4" value="2"&gt;
+  &lt;label for="star-x4"&gt;&lt;span&gt;Fair&lt;/span&gt;&lt;/label&gt;
+  
+  &lt;input type="radio" id="star-x5" value="1"&gt;
+  &lt;label for="star-x5"&gt;&lt;span&gt;Poor&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+</pre>			
+
+		<p><b>Half & Full Stars</b></p>
+			<pre class="prettyprint lang-html linenums">
+&lt;div class="css-star-rating"&gt;                        
+  &lt;input type="radio" id="star-c1" value="5"&gt;
+    &lt;label for="star-c1"&gt;&lt;span&gt;5 Stars&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c2" value="4.5"&gt;
+    &lt;label class="star-half" for="star-c2"&gt;&lt;span&gt;4.5 Stars&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c3" value="4"&gt;
+    &lt;label for="star-c3"&gt;&lt;span&gt;4 Stars&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c4" value="3.5"&gt;
+    &lt;label class="star-half" for="star-c4"&gt;&lt;span&gt;3.5 Stars&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c5" value="3"&gt;
+    &lt;label for="star-c5"&gt;&lt;span&gt;3 Stars&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c6" value="2.5"&gt;
+    &lt;label class="star-half" for="star-c6"&gt;&lt;span&gt;2.5 Stars&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c7" value="2"&gt;
+    &lt;label for="star-c7"&gt;&lt;span&gt;2 Stars&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c8" value="1.5" <strong>checked</strong>&gt;
+    &lt;label class="star-half" for="star-c8"&gt;&lt;span&gt;1.5 Stars&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c9" value="1"&gt;
+    &lt;label for="star-c9"&gt;&lt;span&gt;1 Star&lt;/span&gt;&lt;/label&gt;
+    
+    &lt;input type="radio" id="star-c0" value="0.5"&gt;
+    &lt;label class="star-half" for="star-c0"&gt;&lt;span&gt;0.5 Stars&lt;/span&gt;&lt;/label&gt;                        
+&lt;/div&gt; 
+</pre>			
+
+		<hr />
+		<h3 id="color">C) Colors</h3>
+        <p>Rating widget comes with 6 predefined colors:</p>
+        <p class="th clearfix"><strong>orange</strong> <strong>red</strong> <strong>green</strong> <strong>blue</strong> <strong>purple</strong> <strong>black</strong></p>
+        <p>You can add colors to the rating like that:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="css-star-rating <strong>red</strong>"&gt;  
+</pre>      
+
+		<hr />
+		<h3 id="size">D) Sizes</h3>
+        <p>Rating widget comes with 3 sizes:</p>
+        <p class="th clearfix"><strong>small</strong> <strong>medium</strong> <strong>large</strong></p>
+        <p>You can add sizes to the rating like that:</p>
+<pre class="prettyprint lang-html">
+&lt;div class="css-star-rating <strong>medium</strong>"&gt;  
+</pre>    
+		<p>You can combine colors and sizes by adding them to the HTML code.</p>        
+<pre class="prettyprint lang-html medium">
+&lt;div class="css-star-rating <strong>large</strong> <strong>blue</strong>"&gt;  
+</pre>   
+
+		<hr />
+		<h3 id="size">E) Working with PHP</h3>    
+        <p>Whether you are including the rating widget in an exsting form or a new form all you need to do to post the rating value is make sure that each rating widget has a name attribute. For example a services rating widget will have a name attribute as <b>name="services"</b> for all radio inputs we shall use that name to post the value e.g <b>value="4.5"</b> in php.</p>
+        <p>Lets assume you have a review form that has an action as <b>formprocess.php</b> like this below:</p>   
+<pre class="prettyprint lang-html medium">
+&lt;form method="post" action="php/formprocess.php" id="review"&gt;  
+</pre>   
+		<p>The processing script in the above form is formprocess.php where you will put your PHP code for handling our services rating widget below.</p>
+
+		<p><b>Services Rating Widget</b></p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class="css-star-rating"&gt;  
+  &lt;input type="radio" id="star-x1" name="services" value="5"&gt;
+  &lt;label for="star-x1"&gt;&lt;span&gt;Awesome&lt;/span&gt;&lt;/label&gt;
+  
+  &lt;input type="radio" id="star-x2" name="services" value="4"&gt;
+  &lt;label for="star-x2"&gt;&lt;span&gt;Excellent&lt;/span&gt;&lt;/label&gt;
+  
+  &lt;input type="radio" id="star-x3" name="services" value="3" <strong>checked</strong>&gt;
+  &lt;label for="star-x3"&gt;&lt;span&gt;Good&lt;/span&gt;&lt;/label&gt;
+  
+  &lt;input type="radio" id="star-x4" name="services" value="2"&gt;
+  &lt;label for="star-x4"&gt;&lt;span&gt;Fair&lt;/span&gt;&lt;/label&gt;
+  
+  &lt;input type="radio" id="star-x5" name="services" value="1"&gt;
+  &lt;label for="star-x5"&gt;&lt;span&gt;Poor&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+</pre>		
+
+		<p><b>PHP Code</b></p>
+<pre class="prettyprint lang-php linenums">
+$services = strip_tags(trim($_POST["services"]));
+</pre> 
+
+		</div>      
+           
+       	<!-- Social profiles -->
+		<footer>				
+			<div class="container social">
+				<a href="http://twitter.com/flashblue80" target="_blank" title="Twitter" class="twitter"><i class="icon-twitter"></i></a> 
+				<a href="http://www.facebook.com/flashbluedesign" target="_blank" title="Facebook" class="facebook"><i class="icon-facebook"></i></a>				 
+				<a href="http://plus.google.com/114361730793593826266" target="_blank" title="Google+" class="googleplus"><i class="icon-gplus"></i></a> 
+				<a href="http://www.linkedin.com/in/samiyilmaz80" target="_blank" title="Linkedin" class="linkedin"><i class="icon-linkedin"></i></a> 
+				<a href="http://samiyilmaz.deviantart.com/" target="_blank" title="Deviant Art" class="deviantart"><i class="icon-deviantart"></i></a> 
+				<a href="http://www.behance.net/flashblue" target="_blank" title="Behance" class="behance"><i class="icon-behance"></i></a> 
+				<a href="http://www.dribbble.com/flashblue" target="_blank" title="Dribbble" class="dribbble"><i class="icon-dribbble"></i></a> 
+				<a href="http://pinterest.com/flashblue80" target="_blank" title="Pinterest" class="pinterest"><i class="icon-pinterest-circled"></i></a> 
+				<a href="http://www.flickr.com/photos/flashblue" target="_blank" title="Flickr" class="flickr"><i class="icon-flickr"></i></a> 
+				<a href="http://www.youtube.com/user/flashblue80" target="_blank" title="YouTube" class="youtube"><i class="icon-youtube-play"></i></a>
+				<a href="https://vimeo.com/flashblue" target="_blank" title="Vimeo" class="vimeo"><i class="icon-vimeo"></i></a>				 
+				<a href="http://www.stumbleupon.com/stumbler/flashblue80" target="_blank" title="StumbleUpon" class="stumbleupon"><i class="icon-stumbleupon"></i></a> 
+				<a href="http://flashblue80.tumblr.com/" target="_blank" title="Tumblr" class="tumblr"><i class="icon-tumblr"></i></a> 
+				<a href="http://www.reddit.com/user/flashblue" target="_blank" title="Reddit" class="reddit"><i class="icon-reddit"></i></a> 
+				<a href="http://www.codegrape.com/feeds/user/flashblue.atom" target="_blank" title="RSS Feed" class="rss"><i class="icon-rss"></i></a>
+			</div>
+		</footer>
+		
+		<!-- Go to top arrow -->
+		<div class="totop">
+		   <div class="gototop">
+				<div class="arrowgototop"></div>
+		   </div>
+	  	</div>
+	  
+	</body>
+</html>

@@ -1,0 +1,196 @@
+/*****************
+    - Rating -
+*****************/
+.css-star-rating { 
+	position:relative;
+	display:inline-block;
+	border:none;
+	font-size:14px;
+}
+
+.css-star-rating label,
+.css-star-rating label span,
+.css-star-rating label:before {
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+			user-select:none;
+}
+
+.css-star-rating label {
+	position:relative;
+	float:right;
+	color:#C8C8C8;
+}
+
+.css-star-rating input {  
+	border:0;
+	width:1px; 
+	height:1px;
+	overflow:hidden;
+	position:absolute !important;
+	clip:rect(1px 1px 1px 1px);
+	clip:rect(1px, 1px, 1px, 1px);
+	opacity:0;
+}
+
+.css-star-rating label:before { 
+	margin:3px;
+	font-size:1.1em;
+	font-family:FontAwesome;
+	display:inline-block;
+	content:"\f005";
+}
+    
+.css-star-rating .star-half:before { 
+	position:absolute;
+	content:"\f089";
+}  
+ 
+.css-star-rating:hover label:hover,
+.css-star-rating:hover label:hover ~ label,
+.css-star-rating input:checked ~ label { 
+	color:#FFB801;
+}
+
+.css-star-rating:hover label:hover ~ label { 
+	color:#FFED85;
+}
+	
+.css-star-rating label, 
+.css-star-rating:hover label,
+.css-star-rating:hover input ~ label { 
+	color:#DBE3E6;
+}
+
+/* Tooltip */
+.css-star-rating label span {
+	position:absolute;
+	top:-80px;
+	left:-9999px;
+	z-index:10;
+	display:block;
+	opacity:0;
+	padding:2px 10px;
+	font-family:Arial, Helvetica, sans-serif;	
+	font-size:11px;
+	font-weight:bold;
+	background:#000;
+	color:#fff;
+	white-space:nowrap;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+			border-radius:3px;	
+	-webkit-transition:margin 0.6s, opacity 0.6s;
+	   -moz-transition:margin 0.6s, opacity 0.6s;
+			transition:margin 0.6s, opacity 0.6s;
+}
+
+.css-star-rating label:hover span {
+	top:-28px;
+	left:-5px;
+	opacity:1;
+}
+
+.css-star-rating label span:before {
+	content:''; 
+	position:absolute;
+	border-top:4px solid #000;
+	border-right:4px solid transparent;
+	border-left:4px solid transparent;	
+	left:10px;
+	top:100%;
+}
+
+/* Medium */
+.css-star-rating.medium label:before {
+	font-size:1.6em; 
+	margin:4px;
+}
+
+.css-star-rating.medium label:hover span {
+	top:-31px;
+	left:0;
+}
+
+/* Large */
+.css-star-rating.large label:before {
+	font-size:2.17em; 
+	margin:5px;
+}
+
+.css-star-rating.large label:hover span {
+	top:-33px;
+	left:5px;
+}
+
+/*****************
+    - Colors -
+*****************/
+/* Red */
+.css-star-rating.red:hover label:hover,
+.css-star-rating.red:hover label:hover ~ label,
+.css-star-rating.red input:checked ~ label { 
+	color:#EA6153;	
+}
+
+.css-star-rating.red:hover label:hover ~ label{ 
+	color:#FF9999; 
+}
+
+/* Green  */
+.css-star-rating.green:hover label:hover,
+.css-star-rating.green:hover label:hover ~ label,
+.css-star-rating.green input:checked ~ label { 
+	color:#1FDEB8;	
+}
+
+.css-star-rating.green:hover label:hover ~ label{ 
+	color:#93F0DD; 
+}
+
+/* Blue */
+.css-star-rating.blue:hover label:hover,
+.css-star-rating.blue:hover label:hover ~ label,
+.css-star-rating.blue input:checked ~ label { 
+	color:#438FFD;	
+}
+
+.css-star-rating.blue:hover label:hover ~ label { 
+	color:#9BCDEE; 
+}
+
+/* Purple */
+.css-star-rating.purple:hover label:hover,
+.css-star-rating.purple:hover label:hover ~ label,
+.css-star-rating.purple input:checked ~ label { 
+	color:#9B59B6;	
+}
+
+.css-star-rating.purple:hover label:hover ~ label { 
+	color:#D3B7DF; 
+}
+
+/* Black */
+.css-star-rating.black:hover label:hover,
+.css-star-rating.black:hover label:hover ~ label,
+.css-star-rating.black input:checked ~ label { 
+	color:#3D566E;	
+}
+
+.css-star-rating.black:hover label:hover ~ label { 
+	color:#7B99B7; 
+}
+
+/******************
+    - Bug fix -
+******************/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.css-star-rating { 
+		-webkit-animation:bugfix infinite 1s; 
+	}
+	
+	@-webkit-keyframes bugfix { 
+		from {padding:0;} 
+		to {padding:0;} 
+	}				
+}
