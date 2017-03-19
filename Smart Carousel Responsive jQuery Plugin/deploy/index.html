@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+	
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		
+		<title>Smart Carousel Responsive jQuery Plugin</title>
+		
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		
+		<!-- Bootstrap CSS settings -->
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+		
+		<!-- Google fonts -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" />
+		
+		<!-- CSS style -->
+		<link rel="stylesheet" type="text/css" href="css/preview.css" />
+		
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		<!-- Bootstrap JS -->
+		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
+		<!-- Preview (Remove) -->
+		<script type="text/javascript" src="js/preview.js"></script>
+		<script type="text/javascript" src="js/jquery.scroll.js"></script>
+		
+		<!-- Modernizr -->
+		<script type="text/javascript" src="js/modernizr.custom.js"></script>
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Smart Carousel CSS settings -->
+		<link rel="stylesheet" type="text/css" href="css/smart-carousel.css" />
+		<link rel="stylesheet" type="text/css" href="css/smart-carousel-skins.css" />		
+		
+		<!-- Smart Carousel JS -->
+		<script type="text/javascript" src="js/jquery.smart-carousel.js"></script>
+		
+		<!-- Create Smart Carousel -->
+		<script>
+			var api;
+		
+			$(document).ready(function() {
+				
+				//Default carousel
+				api = $("#smart-carousel").smartCarousel({
+					itemWidth:170,
+					itemHeight:250,
+					distance:15,
+					selectedItemDistance:50,
+					selectedItemZoomFactor:1,
+					unselectedItemZoomFactor:0.67,
+					unselectedItemAlpha:0.6,
+					motionStartDistance:170,
+					topMargin:119,
+					gradientStartPoint:0.35,
+					gradientOverlayColor:"#f0f0f0",
+					gradientOverlaySize:190,
+					reflectionVisible:true,
+					reflectionSize:70,
+					selectByClick:true,
+					autoSlideshow:true,
+					autoSlideshowDelay:5000
+				});
+				
+				//Transparent carousel
+				$("#transparent-carousel").smartCarousel({
+					itemWidth:201,
+					itemHeight:351,
+					distance:-10,
+					selectedItemDistance:35,
+					selectedItemZoomFactor:0.9,
+					unselectedItemZoomFactor:0.6,
+					unselectedItemAlpha:0.6,
+					motionStartDistance:140,
+					topMargin:30,
+					gradientStartPoint:0.36,
+					gradientOverlayColor:"#fafafa",
+					gradientOverlaySize:190,
+					selectByClick:true
+				});
+				
+				//Round image carousel
+				$("#round-image-carousel").smartCarousel({
+					itemWidth:260,
+					itemHeight:260,
+					distance:12,
+					selectedItemDistance:75,
+					selectedItemZoomFactor:1,
+					unselectedItemZoomFactor:0.5,
+					unselectedItemAlpha:0.6,
+					motionStartDistance:210,
+					topMargin:115,
+					gradientStartPoint:0.35,
+					gradientOverlayColor:"#f0f0f0",
+					gradientOverlaySize:190,
+					selectByClick:true
+				});
+				
+				//Square image carousel
+				$("#square-image-carousel").smartCarousel({
+					itemWidth:240,
+					itemHeight:240,
+					distance:10,
+					selectedItemDistance:70,
+					selectedItemZoomFactor:1,
+					unselectedItemZoomFactor:0.5,
+					unselectedItemAlpha:0.9,
+					motionStartDistance:200,
+					topMargin:140,
+					gradientStartPoint:0.35,
+					gradientOverlayColor:"#fafafa",
+					gradientOverlaySize:190,
+					selectByClick:false
+				});
+				
+			});
+		</script>
+		
+	</head>
+	
+	<body>
+	
+		<!-- Header -->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+			
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="logo navbar-brand" href="#"><img src="images/logo.png" alt="" /></a>
+				</div>
+				
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="#skins">Skins</a></li>
+						<li><a href="#features">Features</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!-- Home -->
+		<section id="home" class="home">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 centered">
+						<h1>Smart Carousel Responsive jQuery Plugin</h1>
+						<p>
+							Fully responsive jQuery touch carousel plugin with rich set of features.
+						</p>
+					</div>
+				</div>
+			</div>			
+		</section>
+		
+		<div class="container">
+		
+			<!--
+			##################################
+				- Smart Carousel / Start -
+			##################################
+			-->
+			<div id="smart-carousel" class="smart-carousel round-nav">
+				<div class="smart-carousel-wrapper">
+					<ul class="smart-carousel-container">
+						<li>
+							<img src="images/default/1.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Avatar</h2>
+								<p>Enter the world</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/2.jpg" alt="" />
+							<div class="sc-content">
+								<h2>The Dark Night</h2>
+								<p>Welcome to a world without rules</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/3.jpg" alt="" />
+							<div class="sc-content">
+								<h2>The Hobbit</h2>
+								<p>An Unexpected Journey</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/4.jpg" alt="" />
+							<div class="sc-content">
+								<h2>The Wolverine 3D</h2>
+								<p>X-Men Origins</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/5.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Sherlock Holmes</h2>
+								<p>Nobody Escapes Him</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/6.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Avengers</h2>
+								<p>Earth's Mightiest Heroes United</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/7.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Tintin</h2>
+								<p>The secret of the unicorn</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/8.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Life of Pi</h2>
+								<p>The journey of a lifetime</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/9.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Les Miseribles</h2>
+								<p>The musical phenomenon</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/10.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Prince of Persia</h2>
+								<p>The sands of time</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/11.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Sweeney Todd</h2>
+								<p>Never forget or forgive</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/default/12.jpg" alt="" />
+							<div class="sc-content">
+								<h2>Harry Potter</h2>
+								<p>And the prisoner of Azkaban</p>
+							</div>
+						</li>						
+					</ul>
+				</div>
+			</div>
+			<!--
+			################################
+				- Smart Carousel / End -
+			################################
+			-->
+			
+		</div>
+		
+		<section id="skins" class="section-header bg1">
+			<h1>Skins &amp; Templates</h1>
+			<p>Includes 4 built skins which easy to customize and use.</p>
+		</section>
+		
+		<div class="section light">
+		
+			<div class="sp-title">
+				<h1>Transparent Carousel</h1>
+			</div>		
+		
+			<div class="container">
+			
+				<!--
+				########################################
+					- Transparent Carousel / Start -
+				########################################
+				-->
+				<div id="transparent-carousel" class="smart-carousel transparent">
+					<div class="smart-carousel-wrapper">
+						<ul class="smart-carousel-container">
+							<li>
+								<img src="images/transparent/1.png" alt="" />
+								<div class="sc-content">
+									<h2>Michael Broad</h2>
+									<p>Web Designer</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/2.png" alt="" />
+								<div class="sc-content">
+									<h2>Martin Lawrence</h2>
+									<p>Graphic Designer</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/3.png" alt="" />
+								<div class="sc-content">
+									<h2>Josh Goldman</h2>
+									<p>CEO Founder</p>
+								</div>
+							</li>							
+							<li>
+								<img src="images/transparent/4.png" alt="" />
+								<div class="sc-content">
+									<h2>Marcus Van Basten</h2>
+									<p>Customer Support</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/5.png" alt="" />
+								<div class="sc-content">
+									<h2>Steve Will</h2>
+									<p>Public Relations</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/6.png" alt="" />
+								<div class="sc-content">
+									<h2>Christopher Dowson</h2>
+									<p>Creative Director</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/1.png" alt="" />
+								<div class="sc-content">
+									<h2>Michael Broad</h2>
+									<p>Web Designer</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/2.png" alt="" />
+								<div class="sc-content">
+									<h2>Martin Lawrence</h2>
+									<p>Graphic Designer</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/3.png" alt="" />
+								<div class="sc-content">
+									<h2>Josh Goldman</h2>
+									<p>CEO Founder</p>
+								</div>
+							</li>							
+							<li>
+								<img src="images/transparent/4.png" alt="" />
+								<div class="sc-content">
+									<h2>Marcus Van Basten</h2>
+									<p>Customer Support</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/5.png" alt="" />
+								<div class="sc-content">
+									<h2>Steve Will</h2>
+									<p>Public Relations</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/6.png" alt="" />
+								<div class="sc-content">
+									<h2>Christopher Dowson</h2>
+									<p>Creative Director</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/1.png" alt="" />
+								<div class="sc-content">
+									<h2>Michael Broad</h2>
+									<p>Web Designer</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/2.png" alt="" />
+								<div class="sc-content">
+									<h2>Martin Lawrence</h2>
+									<p>Graphic Designer</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/3.png" alt="" />
+								<div class="sc-content">
+									<h2>Josh Goldman</h2>
+									<p>CEO Founder</p>
+								</div>
+							</li>							
+							<li>
+								<img src="images/transparent/4.png" alt="" />
+								<div class="sc-content">
+									<h2>Marcus Van Basten</h2>
+									<p>Customer Support</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/5.png" alt="" />
+								<div class="sc-content">
+									<h2>Steve Will</h2>
+									<p>Public Relations</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/transparent/6.png" alt="" />
+								<div class="sc-content">
+									<h2>Christopher Dowson</h2>
+									<p>Creative Director</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--
+				######################################
+					- Transparent Carousel / End -
+				######################################
+				-->
+				
+			</div>
+		
+		</div>
+		
+		<div class="section">
+		
+			<div class="sp-title">
+				<h1>Round Image Carousel</h1>
+			</div>		
+		
+			<div class="container">
+			
+				<!--
+				########################################
+					- Round Image Carousel / Start -
+				########################################
+				-->
+				<div id="round-image-carousel" class="smart-carousel round-image round-nav content-bg">
+					<div class="smart-carousel-wrapper">
+						<ul class="smart-carousel-container">
+							<li>
+								<img src="images/round/1.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Rosetta Yarden</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/2.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Pennie Dow</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/3.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Lonna Reiman</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/4.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Kirstin Beran</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/5.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Avrit Nicklas</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/6.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Timmi Amboni</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/7.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Myrle Bunk</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/8.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Heidi Roxanne</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/9.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Danya Churchill</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/10.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Sileas Jalisi</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/11.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Lelia Marsh</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/12.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Celinka Moss</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/13.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Fayth Orlando</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/14.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Harriott Bassow</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/round/15.jpg" alt="" />
+								<div class="sc-content">
+									<h2>Camile Antles</h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--
+				######################################
+					- Round Image Carousel / End -
+				######################################
+				-->
+				
+			</div>
+		
+		</div>
+		
+		<div class="section light">
+		
+			<div class="sp-title">
+				<h1>Square Image Carousel</h1>
+			</div>		
+		
+			<div class="container">
+			
+				<!--
+				#########################################
+					- Square Image Carousel / Start -
+				#########################################
+				-->
+				<div id="square-image-carousel" class="smart-carousel square-image content-bg">
+					<div class="smart-carousel-wrapper">
+						<ul class="smart-carousel-container">
+							<li>
+								<a href="http://www.google.com/" target="_blank">
+									<img src="images/square/1.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Venice Canal View</h2>
+									<p>Photo taken by <a href="http://www.google.com/" target="_blank">John Adams</a></p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.tumblr.com/" target="_blank">
+									<img src="images/square/2.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Beautiful Sea Sunset</h2>
+									<p>Nice shot by <a href="http://www.tumblr.com/" target="_blank">Martin Wilson</a>.</p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.youtube.com/" target="_blank">
+									<img src="images/square/3.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Approaching London</h2>
+									<p><a href="http://www.youtube.com/" target="_blank">Golden Bridge</a> photo taken by Michiel Prins</p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.pinterest.com/" target="_blank">
+									<img src="images/square/4.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Agios Nikolaos</h2>
+									<p>Rhodos night time <a href="http://www.pinterest.com/" target="_blank">shot</a> by William Christ</p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.dribbble.com/" target="_blank">
+									<img src="images/square/5.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Bay at Portofino</h2>
+									<p>Photograph by <a href="http://www.dribbble.com/" target="_blank">Roger Sanches</a></p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.behance.net/" target="_blank">
+									<img src="images/square/6.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Boston on Fringe of Sunset</h2>
+									<p>Photo by <a href="http://www.behance.net/" target="_blank">Abraham Wills</a></p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.twitter.com/" target="_blank">
+									<img src="images/square/7.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Chicago View</h2>
+									<p><a href="http://www.twitter.com/" target="_blank">Night shot</a> by William Brown</p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.flickr.com/" target="_blank">
+									<img src="images/square/8.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>San Francisco on Early Morning</h2>
+									<p>Fantastic shot by <a href="http://www.flickr.com/" target="_blank">Martin Lowrence</a></p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.youtube.com/" target="_blank">
+									<img src="images/square/9.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Hong Kong Downtown</h2>
+									<p>Night shot by <a href="http://www.youtube.com/" target="_blank">Harb Wilkinson</a></p>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.facebook.com/" target="_blank">
+									<img src="images/square/10.jpg" alt="" />
+								</a>
+								<div class="sc-content">
+									<h2>Newyork Skyline</h2>
+									<p>Morning time <a href="http://www.facebook.com/" target="_blank">shot</a> by Tom Crown</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--
+				#######################################
+					- Square Image Carousel / End -
+				#######################################
+				-->
+				
+			</div>
+		
+		</div>
+		
+		<section id="features" class="section">
+		
+			<div class="sp-title">
+				<h1>Features</h1>
+			</div>
+		
+			<div class="container">
+			
+				<div class="row">
+                
+					<div class="col-md-4 iconbox">
+                  		<i class="fa fa-laptop fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>Responsive Layout</h5>
+                         	<p>The plugin will always fit the screen of the device being used, and thus unnecessary scrolling is avoided.</p>
+                    	</div>
+                  	</div>
+				  
+                  	<div class="col-md-4 iconbox">
+                  		<i class="fa fa-css3 fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>CSS3 Transitions</h5>
+                         	<p>The plugin will use CSS3 transitions for effects like opacity change or scaling if available.</p>
+                    	</div>
+                  	</div>
+				  
+                  	<div class="col-md-4 iconbox">
+                  		<i class="fa fa-puzzle-piece fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>Multiple Skins</h5>
+                        	<p>Smart Carousel offers multiple skins that you can choose from and many customization options.</p>
+                    	</div>
+                  	</div>
+					
+            	</div>
+				
+				<div class="row">
+                
+					<div class="col-md-4 iconbox">
+                  		<i class="fa fa-mobile-phone fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>Touch Enabled</h5>
+                         	<p>Smart Carousel has the touch support for mobile devices and drag support for desktop.</p>
+                    	</div>
+                  	</div>
+				  
+                  	<div class="col-md-4 iconbox">
+                  		<i class="fa fa-keyboard-o fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>Keyboard Support</h5>
+                         	<p>Keyboard navigation support enables the user to navigate between the items by using the arrow keys.</p>
+                    	</div>
+                  	</div>
+				  
+                  	<div class="col-md-4 iconbox">
+                  		<i class="fa fa-arrows fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>Mouse Wheel Support</h5>
+                        	<p>Mouse wheel support allows the user to scroll through the items by using the mouse wheel.</p>
+                    	</div>
+                  	</div>
+					
+            	</div>
+				
+				<div class="row">
+                
+					<div class="col-md-4 iconbox">
+                  		<i class="fa fa-sun-o fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>Reflection Effect</h5>
+                         	<p>The plugin is enhanced with reflection effect. Items can have reflection without having to add it manually.</p>
+                    	</div>
+                  	</div>
+				  
+                  	<div class="col-md-4 iconbox">
+                  		<i class="fa fa-image fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>Gradient Mask Effect</h5>
+                         	<p>Canvas based gradient masks can be placed on each side of the plugin to add interest and depth.</p>
+                    	</div>
+                  	</div>
+				  
+                  	<div class="col-md-4 iconbox">
+                  		<i class="fa fa-gears fa-2x fa-fw"></i>
+                    	<div class="iconbox-content">
+                      		<h5>Public API</h5>
+                        	<p>The public API offers useful methods and event types for developers to integrate the plugin into their own apps and sites.</p>
+                    	</div>
+                  	</div>
+					
+            	</div>
+			
+			</div>
+		
+		</section>
+		
+		<!-- Footer -->
+		<div class="footer">
+			<div class="container">
+				Copyright © <a href="http://www.flashbluedesign.com" target="_blank">flashblue</a>
+			</div>
+		</div>
+		
+	</body>
+	
+</html>

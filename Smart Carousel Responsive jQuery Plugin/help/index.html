@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
+		<title>Smart Carousel Responsive jQuery Plugin - Help Documentation</title>
+		
+		<!-- CSS style -->
+		<link rel="shortcut icon" href="assets/images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/fontello.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="assets/js/google-code-prettify/prettify.css" />
+		
+		<!-- Google web fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+		
+		<!-- jQuery -->
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+		<script type="text/javascript" src="assets/js/globals.js"></script>
+		<script type="text/javascript" src="assets/js/google-code-prettify/prettify.js"></script>
+	</head>
+	<body>
+		
+		<!-- Header -->
+		<header>
+			<div class="container">
+				<div class="logo">Smart Carousel Responsive jQuery Plugin</div>
+				<div class="slogan">Fully responsive jQuery touch carousel plugin with rich set of features</div>
+			</div>
+		</header>
+		
+		<!-- Container -->
+		<div class="container">	
+		
+			<div class="avatar">
+				<a href="http://www.codegrape.com/user/flashblue"><img src="assets/images/flashblue.png" width="256" height="50" alt="FlashBlue" title="FlashBlue" /></a>
+			</div>
+		
+			<div class="author">
+				Created: <strong>13/08/2014</strong><br />
+				Last Update: <strong>29/07/2016</strong><br />
+				By: <strong><a href="http://www.codegrape.com/user/flashblue/portfolio">FlashBlue</a></strong><br />
+				Profile: <strong><a href="http://www.codegrape.com/user/flashblue">www.codegrape.com/user/flashblue</a></strong><br />
+				Website: <strong><a href="http://www.flashbluedesign.com/">www.flashbluedesign.com</a></strong><br />
+				E-mail: <strong><a href="mailto:flashblue80@hotmail.com">flashblue80@hotmail.com</a></strong><br />
+				Twitter: <strong><a href="http://twitter.com/flashblue80">twitter.com/flashblue80</a></strong>
+			</div>
+			<p>&nbsp;</p>		
+			
+			<h2 class="alt">Table of Contents</h2>
+			<ol class="alpha">
+				<li><a href="#directories">Directories</a></li>
+				<li><a href="#font">Font Used</a></li>
+				<li><a href="#installation">Installation</a></li>
+				<li><a href="#parameter">Plugin Parameters</a></li>
+				<li><a href="#api">Public API</a></li>	
+				<li><a href="#callback">Callback Functions</a></li>	
+			</ol>
+			
+			<hr />
+			<h3 id="directories">A) Directories</h3>
+			<p>
+				<b>source</b> - Original source files other files are part of the source, you do not need to upload any of these to your server. Use these to change the code or style.
+			</p>
+			<p>
+				<b>deploy</b> – Published files  for adding item to the site.
+				These are the files you need to <span class="note">upload to your server</span>.
+			</p>
+			<p><b>help</b> – Help file (HTML)</p>
+			
+			<hr />
+			<h3 id="font">B) Font Used</h3>
+			<p><strong>Open Sans</strong> (You can download it here as free: <a href="http://www.fontsquirrel.com/fonts/open-sans" target="_blank">http://www.fontsquirrel.com/fonts/open-sans</a>)</p>
+			<p>You can change font from CSS file.</p>
+			
+			<hr />
+			<h3 id="installation">C) Installation</h3>
+			<p>Installing the carousel requires the following steps.</p>
+			<ol>
+				<li>Including the css files.</li>
+				<li>Including the javascript files.</li>
+				<li>Specifying the html tags of the carousel within your page.</li>
+				<li>Instantiating a javascript function call with any optional parameters.</li>
+			</ol>	
+			<p>Below describes these steps in more detail.</p>
+			<p>In step 1, to include css files, simply specify the following lines of code within your <em>&lt;head&gt;</em> tag:</head>
+			<pre class="prettyprint lang-html linenums">
+&lt;link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="css/smart-carousel.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="css/smart-carousel-skins.css" /&gt;
+</pre>
+			<p>You can use another Google web font or fully remove it if you want.</p>
+			<p>In step 2, you will need to include the jquery's library files, other plugins used and the carousel's file <strong>jquery.smart-carousel.js</strong> which is located in the <strong>js</strong> directory. The code below shows the include in a html page:</p>
+			<pre class="prettyprint lang-html linenums">&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/modernizr.custom.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.smart-carousel.js&quot;&gt;&lt;/script&gt;
+</pre>
+			<p><span class="note">Note:</span> The css, js files are the compressed production version of the file. If you intend to modify the carousel's source code, you will need to look at files in source folder and it is recommended that you minify the modified file afterwards.</p>
+			<p>In step 3, to specify the tags of the slider itself, refer to the examples in the <strong>index.html</strong> file.</p>
+			
+			<pre class="prettyprint lang-html linenums">
+&lt;div class="smart-carousel"&gt;
+   &lt;!-- all the tags in between, see index.html for the complete code --&gt;
+&lt;/div&gt;
+</pre>
+
+			<p>You can use different CSS names for the carousel.</p>
+			<p>You can use these as template and copy and paste it onto your own page, but will have to modify it accordingly with your own image/item information.</p>
+			<p>Finally in step 4, you will need to instantiate a javascript function call to get the slider initialized. The example code looks like this below:</p>
+			<pre class="prettyprint lang-html lang-js linenums">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $(document).ready(function() {
+    $(&quot;.smart-carousel&quot;).smartCarousel();
+  });
+&lt;/script&gt;
+</pre>
+			<p>This will instantiate the carousel using the default parameters.</p>
+			
+			<hr />
+			<h3 id="parameter">D) Plugin Parameters</h3>
+			<p>You can change some common attributes of the carousel through the parameters of the plugin. Below is an example of the attributes being specified with corresponding values.</p> 
+			<p><span class="note">Note:</span> if you want to leave a parameter with its default value, you can omit that parameter in the javascript call.</p>
+			<pre class="prettyprint lang-html lang-js linenums">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $(document).ready(function() {
+    $(&quot;.smart-carousel&quot;).smartCarousel({
+      itemWidth:300,
+      itemHeight:450,
+	  
+      distance:15,
+      startIndex:"auto",
+      loop:true,
+      motionStartDistance:150,
+      topMargin:30,
+      navigationButtonsVisible:true,
+      slideSpeed:500,		
+      selectByClick:false,
+
+      //Keyboard
+      enableKeyboard:true,
+
+      //Mouse wheel
+      enableMouseWheel:true,
+      reverseMouseWheel:false,
+
+      //Auto slide
+      autoSlideshow:false,
+      autoSlideshowDelay:3000,
+
+      //Selected item
+      selectedItemDistance:50,
+      selectedItemZoomFactor:1,
+
+      //Unselected item
+      unselectedItemZoomFactor:0.6,
+      unselectedItemAlpha:0.6,
+
+      //Preload
+      preload:true,
+      showPreloader:true,
+
+      //Gradient
+      gradientStartPoint:0.15,
+      gradientEndPoint:1,
+      gradientOverlayVisible:true,
+      gradientOverlayColor:"#fff",
+      gradientOverlaySize:215,
+
+      //Reflection
+      reflectionVisible:false,
+      reflectionDistance:1,
+      reflectionSize:100,
+      reflectionAlpha:0.3
+    });
+  });    
+&lt;/script&gt;  		
+</pre>
+			<table>
+				<thead>
+					<tr>
+						<th style="width:20%">Attribute</th>
+						<th style="width:33%">Properties</th>
+						<th style="width:47%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th><strong>itemWidth</strong></th>
+						<td><b>number</b> - Default: <strong>300</strong></td>
+						<td>The width of the carosuel item images. The value is set in pixels (px).</td>
+					</tr>
+					<tr>
+						<th><strong>itemHeight</strong></th>
+						<td><b>number</b> - Default: <strong>450</strong></td>
+						<td>The height of the carosuel item images. The value is set in pixels (px).</td>
+					</tr>
+					<tr>
+						<th><strong>distance</strong></th>
+						<td><b>number</b> - Default: <strong>15</strong></td>
+						<td>The distance between the carousel items. The value is set in pixels (px).</td>
+					</tr>
+					<tr>
+						<th><strong>startIndex</strong></th>
+						<td><b>string</b> - Default: <strong>auto</strong></td>
+						<td>The index of the carousel item to show at start-up. Use <strong>0</strong> for the first item and <strong>auto</strong> for the middle.</td>
+					</tr>	
+					<tr>
+						<th><strong>loop</strong></th>
+						<td><b>boolean</b> - Default: <strong>true</strong></td>
+						<td>
+							Specifies if the auto slideshow returns to the first item after showing the last one. This option only works when the <em>autoSlideshow</em> parameter is set to <em>true</em>.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>motionStartDistance</strong></th>
+						<td><b>number</b> - Default: <strong>150</strong></td>
+						<td>Specifies the distance between the center and the place on each side where item scaling and other property updates will begin changing. (Such as opacity, scale) The value is set in pixels (px).</td>
+					</tr>
+					<tr>
+						<th><strong>topMargin</strong></th>
+						<td><b>number</b> - Default: <strong>30</strong></td>
+						<td>Specifies the distance between the top of the plugin and the currently selected item. The value is set in pixels (px).</td>
+					</tr>
+					<tr>
+						<th><strong>navigationButtonsVisible</strong></th>
+						<td><b>boolean</b> - Default: <strong>true</strong></td>
+						<td>
+							Specifies whether the navigation buttons will be visible.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>slideSpeed</strong></th>
+						<td><b>number</b> - Default: <strong>500</strong></td>
+						<td>The slide transition speed in milliseconds.</td>
+					</tr>
+					<tr>
+						<th><strong>selectByClick</strong></th>
+						<td><b>boolean</b> - Default: <strong>false</strong></td>
+						<td>
+							Specifies whether a carousel item can be selected with a single click.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>enableKeyboard</strong></th>
+						<td><b>boolean</b> - Default: <strong>true</strong></td>
+						<td>
+							Specifies if to use keyboard direction keys to navigate between the carousel items.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>enableMouseWheel</strong></th>
+						<td><b>boolean</b> - Default: <strong>true</strong></td>
+						<td>
+							Specifies if to use the mouse wheel to switch between the carousel items.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>reverseMouseWheel</strong></th>
+						<td><b>boolean</b> - Default: <strong>false</strong></td>
+						<td>
+							Indicates whether the direction of the mouse wheel navigation will be reversed.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>autoSlideshow</strong></th>
+						<td><b>boolean</b> - Default: <strong>false</strong></td>
+						<td>
+							Indicates whether to display the items in auto slideshow mode.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>autoSlideshowDelay</strong></th>
+						<td><b>number</b> - Default: <strong>3000</strong></td>
+						<td>The number of milliseconds to wait for each carousel item during auto slideshow mode.</td>
+					</tr>
+					<tr>
+						<th><strong>selectedItemDistance</strong></th>
+						<td><b>number</b> - Default: <strong>3</strong></td>
+						<td>The number of seconds to wait for each carousel item during auto slideshow mode.</td>
+					</tr>
+					<tr>
+						<th><strong>selectedItemZoomFactor</strong></th>
+						<td><b>number</b> - Default: <strong>1</strong></td>
+						<td>The scale factor for the currently selected item. The value is between <strong>0</strong> and <strong>1</strong>.</td>
+					</tr>
+					<tr>
+						<th><strong>unselectedItemZoomFactor</strong></th>
+						<td><b>number</b> - Default: <strong>0.6</strong></td>
+						<td>The scale factor for the unselected items. The value is between <strong>0</strong> and <strong>1</strong>.</td>
+					</tr>
+					<tr>
+						<th><strong>unselectedItemAlpha</strong></th>
+						<td><b>number</b> - Default: <strong>0.6</strong></td>
+						<td>The opacity of the unselected carousel items. The value is between <strong>0</strong> and <strong>1</strong>.</td>
+					</tr>
+					<tr>
+						<th><strong>preload</strong></th>
+						<td><b>boolean</b> - Default: <strong>true</strong></td>
+						<td>
+							Specifies if all of the images will be loaded at start and then start the plugin.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>showPreloader</strong></th>
+						<td><b>boolean</b> - Default: <strong>true</strong></td>
+						<td>
+							Specifies whether a preloader will be shown while loading the images.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>gradientStartPoint</strong></th>
+						<td><b>number</b> - Default: <strong>0.15</strong></td>
+						<td>The color start point for the gradient overlays. The value is between <strong>0</strong> and <strong>1</strong>.</td>
+					</tr>
+					<tr>
+						<th><strong>gradientEndPoint</strong></th>
+						<td><b>number</b> - Default: <strong>1</strong></td>
+						<td>The color end point for the gradient overlays. The value is between <strong>0</strong> and <strong>1</strong>.</td>
+					</tr>
+					<tr>
+						<th><strong>gradientOverlayVisible</strong></th>
+						<td><b>boolean</b> - Default: <strong>true</strong></td>
+						<td>
+							Specifies whether the gradient overlays will be visible.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>gradientOverlayColor</strong></th>
+						<td><b>string</b> - Default: <strong>#fff</strong></td>
+						<td>
+							Specifies the color of the gradient overlays. Any RGB color.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>gradientOverlaySize</strong></th>
+						<td><b>number</b> - Default: <strong>215</strong></td>
+						<td>The width of the gradient overlays. The value is set in pixels (px).</td>
+					</tr>
+					<tr>
+						<th><strong>reflectionVisible</strong></th>
+						<td><b>boolean</b> - Default: <strong>false</strong></td>
+						<td>
+							Specifies whether the item image reflection will be visible.
+							Set to <strong>true</strong> or <strong>false</strong>.
+						</td>
+					</tr>
+					<tr>
+						<th><strong>reflectionDistance</strong></th>
+						<td><b>number</b> - Default: <strong>4</strong></td>
+						<td>Specifies the distance between the image and the reflection. The value is set in pixels (px).</td>
+					</tr>
+					<tr>
+						<th><strong>reflectionSize</strong></th>
+						<td><b>number</b> - Default: <strong>100</strong></td>
+						<td>Specifies the height of the reflection. The value is set in pixels (px).</td>
+					</tr>
+					<tr>
+						<th><strong>reflectionAlpha</strong></th>
+						<td><b>number</b> - Default: <strong>0.3</strong></td>
+						<td>The opacity of the reflection. The value is between <strong>0</strong> and <strong>1</strong>.</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<hr />
+			<h3 id="api">E) Public API</h3>
+			<p>The carousel offers a public API which you can use to control component inside the carousel from within your own scripts. To access this api, use the following code:</p>
+			<pre class="prettyprint lang-html lang-js linenums">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var api;
+  
+  $(document).ready(function() {
+    api = $(&quot;.smart-carousel&quot;).smartCarousel();
+  });
+&lt;/script&gt;
+</pre>		
+			<p>You cay use the following functions:</p>
+			<ul>
+				<li><strong>api.select(2, 4000)</strong> - Selects the 2nd item with 4 seconds selection animation</li>
+				<li><strong>api.selectPrev(2000)</strong> - Selects the previous item with 2 seconds selection animation</li>
+				<li><strong>api.selectNext(0)</strong> - Selects the next item with no animation</li>
+				<li><strong>api.startAutoSlideshow()</strong> - Starts auto slideshow</li>
+				<li><strong>api.stopAutoSlideshow()</strong> - Stops auto slideshow</li>					
+			</ul>
+			
+			<p>Or you can use the following events:</p>
+			<ul>
+				<li><strong>smart_carousel.closestitemchanged</strong> - Event is triggered when closest item to the center is changed</li>
+				<li><strong>smart_carousel.itemselected</strong> - Event is triggered when the selected item is changed</li>
+				<li><strong>smart_carousel.selectionanimationstart</strong> - Event is triggered when selection animation has started</li>
+				<li><strong>smart_carousel.selectionanimationend</strong> - Event is triggered when selection animation has ended</li>
+			</ul>
+			
+			<p>You can call event triggers like below:</p>
+			
+			<pre class="prettyprint lang-html lang-js linenums">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  api.on("smart_carousel.closestitemchanged", function(e) {
+	console.log(e.item.index());
+  });
+
+  api.on("smart_carousel.itemselected", function(e) {
+	console.log(e.item.index());
+  });
+  
+  api.on("smart_carousel.selectionanimationstart", function(e) {
+	console.log("Animation has started");
+  });
+  
+  api.on("smart_carousel.selectionanimationend", function(e) {
+	console.log("Animation has ended");
+  });
+&lt;/script&gt;
+</pre>			
+			
+		</div>
+		
+		<!-- Social profiles -->
+		<footer>				
+			<div class="container social">
+				<a href="http://twitter.com/flashblue80" target="_blank" title="Twitter" class="twitter"><i class="icon-twitter"></i></a> 
+				<a href="http://www.facebook.com/flashbluedesign" target="_blank" title="Facebook" class="facebook"><i class="icon-facebook"></i></a>				 
+				<a href="http://plus.google.com/114361730793593826266" target="_blank" title="Google+" class="googleplus"><i class="icon-gplus"></i></a> 
+				<a href="http://www.linkedin.com/in/samiyilmaz80" target="_blank" title="Linkedin" class="linkedin"><i class="icon-linkedin"></i></a> 
+				<a href="http://samiyilmaz.deviantart.com/" target="_blank" title="Deviant Art" class="deviantart"><i class="icon-deviantart"></i></a> 
+				<a href="http://www.behance.net/flashblue" target="_blank" title="Behance" class="behance"><i class="icon-behance"></i></a> 
+				<a href="http://www.dribbble.com/flashblue" target="_blank" title="Dribbble" class="dribbble"><i class="icon-dribbble"></i></a> 
+				<a href="http://pinterest.com/flashblue80" target="_blank" title="Pinterest" class="pinterest"><i class="icon-pinterest-circled"></i></a> 
+				<a href="http://www.flickr.com/photos/flashblue" target="_blank" title="Flickr" class="flickr"><i class="icon-flickr"></i></a> 
+				<a href="http://www.youtube.com/user/flashblue80" target="_blank" title="YouTube" class="youtube"><i class="icon-youtube-play"></i></a>
+				<a href="https://vimeo.com/flashblue" target="_blank" title="Vimeo" class="vimeo"><i class="icon-vimeo"></i></a>				 
+				<a href="http://www.stumbleupon.com/stumbler/flashblue80" target="_blank" title="StumbleUpon" class="stumbleupon"><i class="icon-stumbleupon"></i></a> 
+				<a href="http://flashblue80.tumblr.com/" target="_blank" title="Tumblr" class="tumblr"><i class="icon-tumblr"></i></a> 
+				<a href="http://www.reddit.com/user/flashblue" target="_blank" title="Reddit" class="reddit"><i class="icon-reddit"></i></a> 
+				<a href="http://www.codegrape.com/feeds/user/flashblue.atom" target="_blank" title="RSS Feed" class="rss"><i class="icon-rss"></i></a>
+			</div>
+		</footer>
+		
+		<!-- Go to top arrow -->
+		<div class="totop">
+		   <div class="gototop">
+				<div class="arrowgototop"></div>
+		   </div>
+	  	</div>
+	  
+	</body>
+</html>
