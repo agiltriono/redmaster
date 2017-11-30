@@ -1,7 +1,3 @@
-//<![CDATA[
-// emotikon
-function downloadJSAtOnload(){var d=document.createElement("script");d.src="https://cdn.rawgit.com/agiltriono/Blogger-Demo-Templates/master/twemoji2a2.min.js",document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
-//]]>
 var velocityShow = function (promise) {
   var n = this
   $.Velocity(n.barDom, {
