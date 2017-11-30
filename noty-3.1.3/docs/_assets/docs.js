@@ -234,7 +234,7 @@ $('body').on('click', '#example-velocity', function (e) {
 
 setTimeout(function () {
   new Noty({
-    text: '<div class="text-left">&#x1F1E6; What Are You Looking ? go Find it !</div>',
+    text: '<div class="text-left">What Are You Looking ? go Find it !</div>',
     type: 'information',
     theme: 'mint',
     layout: 'topRight',
